@@ -1,3 +1,70 @@
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato-black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: black;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato-BlackItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: black;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: bold;
+}
+
 .list {
     list-style: none;
 }
+
+.list-item:nth-child(2) {
+    text-decoration: underline;
+}
+
+.list-item:nth-child(3) {
+    text-decoration: overline;
+}
+
+.list-item-submenu-block {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-blok {
+    text-align: center;
+}
+
+.text {
+    font-family: "Lato", "Roboto", sans-serif;
+    font-style: italic;
+    color: red;
+}
+
+.text-link {
+    font-weight: bold;
+}
+
+.blok {
+    width: 200px;
+    height: 200px;
+    min-height: 50px;
+    max-height: 60px;
+    background-color: green;
+    border: 5px solid red;
+    padding: 10px 5px 7px 15px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    /* overflow: scroll; */
+    box-sizing: border-box;
+    border-radius: 50%;
+    /* background-image: url(); */
+    border-radius: 5px 20px 35px 70px;
+}
+
+.zadanie {}
