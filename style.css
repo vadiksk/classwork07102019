@@ -1,69 +1,122 @@
-                    .column {
-                        border: 1px solid red;
-                        padding: 2px;
-                        box-sizing: border-box;
-                        display: none;
-                        width: 150px;
-                        height: 150px;
-                    }
-                    
-                    .bg {
-                        background-color: blue;
-                        background-image: url("./1.jpg");
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position-x: 0%;
-                        background-position-y: 0%;
-                        background-origin: border-box;
-                        height: 60vh;
-                        border: 3px solid red;
-                        padding: 50px;
-                    }
-                    /*всегда пишем после клеарфикса*/
-                    
-                    .clerfix {
-                        content: "";
-                        display: block;
-                        clear: both;
-                    }
-                    /*-------------------*/
-                    
-                    .parents {
-                        position: relative;
-                    }
-                    
-                    .relative {
-                        position: relative;
-                        top: 50px;
-                        left: 50px;
-                    }
-                    
-                    .absolute {
-                        position: absolute;
-                        top: 50px;
-                        right: 50px;
-                    }
-                    
-                    .fixed {
-                        position: fixed;
-                        top: 0px;
-                        left: 0px;
-                    }
-                    
-                    .red {
-                        width: 100px;
-                        height: 100px;
-                        border: 5px black;
-                        background: red;
-                    }
-                    
-                    .red-wer {
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        border: 5px black;
-                        background: white;
-                        position: relative;
-                        top: 25%;
-                        left: 25%;
-                    }
+                                        @font-family: fontAwesome;
+                                        input:focus {
+                                            border: 2px solid red;
+                                            outline: none;
+                                        }
+                                        
+                                        input:required {
+                                            background: green;
+                                        }
+                                        
+                                        div:nth-child(2n) {
+                                            font-size: 25px;
+                                        }
+                                        
+                                        .block:first-child {
+                                            color: orange;
+                                        }
+                                        
+                                        .block:nth-child(7) {
+                                            text-decoration: underline;
+                                        }
+                                        
+                                        span:nth-of-type(2n) {
+                                            background: purple;
+                                        }
+                                        
+                                        header:after {
+                                            content: "+";
+                                        }
+                                        
+                                        header:before {
+                                            font-family: fontAwesome;
+                                            content: "\2693";
+                                            display: inline-block;
+                                        }
+                                        
+                                        .z-index div {
+                                            width: 150px;
+                                            height: 150px;
+                                            position: relative;
+                                        }
+                                        
+                                        @keyframes example {
+                                            0% {
+                                                transform: translate(0px, 0px);
+                                                background: yellow;
+                                                opacity: 0.2;
+                                            }
+                                            25% {
+                                                transform: translate(25px, 25px);
+                                                background: green;
+                                                opacity: 0.7;
+                                            }
+                                            50% {
+                                                transform: translate(50px, 50px);
+                                                background: blue;
+                                                opacity: 0.8;
+                                            }
+                                            75% {
+                                                transform: translate(75px, 75px);
+                                                background: blueviolet;
+                                                opacity: 0.9;
+                                            }
+                                            100% {
+                                                transform: translate(0px, 0px);
+                                                background: yellow;
+                                                opacity: 1;
+                                            }
+                                        }
+                                        
+                                        .z-index div:first-child {
+                                            background: linear-gradient( to right, red, yellow);
+                                            border-radius: 30px 10px 25px 15px;
+                                            animation-name: example;
+                                            animation-duration: 2s;
+                                            animation-timing-function: ease-in;
+                                            animation-delay: 2s;
+                                            animation-iteration-count: infinite;
+                                        }
+                                        
+                                        .z-index div:first-child:hover {
+                                            z-index: 1;
+                                            /*
+        transform: translate(50px, 100px);
+        */
+                                        }
+                                        
+                                        .z-index div:nth-child(2) {
+                                            background: radial-gradient(circle, greenyellow, red);
+                                            top: -50px;
+                                            left: 50px;
+                                            border-radius: 10px 15px 20px 35px;
+                                        }
+                                        
+                                        .z-index div:nth-child(2):hover {
+                                            z-index: 1;
+                                            transform: scale(1.2);
+                                        }
+                                        
+                                        .z-index div:last-child {
+                                            background: springgreen;
+                                            top: -150px;
+                                            left: 150px;
+                                            border-radius: 40px 20px 35px 45px;
+                                            opacity: 0.5;
+                                            box-shadow: 0 0 5px 3px red;
+                                        }
+                                        
+                                        .z-index div:last-child:hover {
+                                            transform: rotate(45deg);
+                                        }
+                                        
+                                        .list-ul-li {
+                                            list-style: none;
+                                        }
+                                        
+                                        .list-ul-li:before {
+                                            content: "*";
+                                            top: 3px;
+                                            left: 3px;
+                                            position: relative;
+                                        }
